@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de taxas de maquininha — out/2026</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#123}
+h1{font-size:1.4rem}label{display:block;margin-top:12px;font-weight:600}
+input,select{width:100%;padding:8px;margin-top:4px;font-size:1rem}
+button{margin-top:16px;padding:10px 20px;font-size:1rem;background:#0d5c3f;color:#fff;border:0;border-radius:6px}
+#out{margin-top:20px;padding:16px;background:#f2f7f4;border-radius:8px;font-size:1.1rem;display:none}
+small{color:#567}
+</style>
+<h1>Calculadora de taxas de maquininha (outubro/2026)</h1>
+<p><small>Dados do <a href="https://guiamaquininha.com.br/indice-de-taxas/">Índice Guia Maquininha</a>, conferidos nos sites oficiais. Recebimento em 1 dia útil, Visa/Mastercard.</small></p>
+<label>Marca
+<select id="m">
+<option value="0">Ton — Mega+ (0,57% / 0,57% / 7,97%)</option>
+<option value="1">PagBank — Super Max (0,58% / 0,58% / 7,98%)</option>
+<option value="2">Mercado Pago — Point (0,74% / 0,74% / 8,99%)</option>
+<option value="3">InfinitePay — entrada (1,37% / 3,15% / 12,40%)</option>
+</select></label>
+<label>Tipo de venda
+<select id="t">
+<option value="debito">Débito</option>
+<option value="credito_vista">Crédito à vista</option>
+<option value="parcelado_12x">Parcelado 12x</option>
+<option value="pix">Pix (grátis)</option>
+</select></label>
+<label>Valor da venda (R$)<input id="v" type="number" step="0.01" min="0" value="100"></label>
+<button onclick="calc()">Calcular</button>
+<div id="out"></div>
+<script>
+const taxas=[
+ {debito:0.57,credito_vista:0.57,parcelado_12x:7.97,pix:0},
+ {debito:0.58,credito_vista:0.58,parcelado_12x:7.98,pix:0},
+ {debito:0.74,credito_vista:0.74,parcelado_12x:8.99,pix:0},
+ {debito:1.37,credito_vista:3.15,parcelado_12x:12.40,pix:0}];
+function calc(){
+ const m=taxas[+document.getElementById('m').value];
+ const t=document.getElementById('t').value;
+ const v=parseFloat(document.getElementById('v').value)||0;
+ const taxa=v*m[t]/100, liq=v-taxa;
+ document.getElementById('out').style.display='block';
+ document.getElementById('out').innerHTML='Taxa ('+m[t].toFixed(2).replace('.',',')+'%): <b>R$ '+taxa.toFixed(2).replace('.',',')+'</b><br>Você recebe: <b>R$ '+liq.toFixed(2).replace('.',',')+'</b>';
+}
+</script>
