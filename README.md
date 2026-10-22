@@ -7,6 +7,11 @@ Dados mantidos por **Guia Maquininha**: https://guiamaquininha.com.br/indice-de-
 ## Arquivos
 - `taxas.json` — débito, crédito à vista, Pix e 12x por marca (outubro/2026)
 - `index.html` — calculadora simples de taxa e valor líquido
+- `sitemap.xml` — sitemap do GitHub Pages
 
-## Simulador completo
-https://guiamaquininha.com.br/simulador-taxas-ton/
+## Links
+- Calculadora (GitHub Pages): https://guiamaquininha.github.io/taxas-maquininhas-br/
+- Site: https://guiamaquininha.com.br/
+- Índice de taxas: https://guiamaquininha.com.br/indice-de-taxas/
+- Simulador de taxas Ton: https://guiamaquininha.com.br/simulador-taxas-ton/
+- Gravatar: https://gravatar.com/guiamaquininhabr
