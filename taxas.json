@@ -1,0 +1,13 @@
+{
+  "fonte": "Guia Maquininha - Indice de taxas de maquininha",
+  "url_fonte": "https://guiamaquininha.com.br/indice-de-taxas/",
+  "competencia": "2026-10",
+  "observacoes": "Taxas de entrada conferidas em outubro de 2026 nos sites oficiais. Recebimento em 1 dia util. Bandeiras Visa/Mastercard. Ton, PagBank e Mercado Pago: promocao de 30 dias ou R$ 5 mil em vendas; depois, faixa por faturamento. InfinitePay: sem promocao, faixa de entrada ate R$ 20 mil/mes.",
+  "pix": "gratis com chave cadastrada nas 4 marcas",
+  "taxas": [
+    {"marca": "Ton", "plano": "Ton Mega+ (promocao 30 dias)", "debito": 0.57, "credito_vista": 0.57, "pix": 0.0, "parcelado_12x": 7.97},
+    {"marca": "PagBank", "plano": "Super Max (promocao 30 dias)", "debito": 0.58, "credito_vista": 0.58, "pix": 0.0, "parcelado_12x": 7.98},
+    {"marca": "Mercado Pago", "plano": "Maquininhas Point (promocao 30 dias)", "debito": 0.74, "credito_vista": 0.74, "pix": 0.0, "parcelado_12x": 8.99},
+    {"marca": "InfinitePay", "plano": "Faixa de entrada (ate R$ 20 mil/mes)", "debito": 1.37, "credito_vista": 3.15, "pix": 0.0, "parcelado_12x": 12.40}
+  ]
+}
